@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lolamaimane.github.io/depri-projects-website/sitemap.xml
