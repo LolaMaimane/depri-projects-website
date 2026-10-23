@@ -12,7 +12,7 @@ Static website for **Depri Projects CC** (Reg. 2002/013092/23), supplier of aggr
 Plain HTML/CSS/JS, no build step. Open `index.html` in a browser to preview.
 
 ## Contact form
-The form posts to [FormSubmit](https://formsubmit.co) and is delivered to `depriprojects@gmail.com`. The **first** submission sends an activation email to that inbox; click the link once to start receiving enquiries. Change the address in the `<form action>` in `contact.html` once the company domain email is set up.
+The form posts to [FormSubmit](https://formsubmit.co) and is delivered to `info@fhdepriprojects.com`. The **first** submission sends an activation email to that inbox; click the link once to start receiving enquiries. Change the address in the `<form action>` in `contact.html` once the company domain email is set up.
 
 ## Image credits
 - Crusher, granite, marble and container photos: supplied by Depri Projects.
