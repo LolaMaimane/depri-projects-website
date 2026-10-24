@@ -339,3 +339,76 @@ table.matrix{width:100%;border-collapse:collapse;font-size:.92rem;min-width:640p
   .to-top{right:20px;bottom:80px}
 }
 @media print{.site-header,.wa-float,.to-top,.site-footer{display:none}.page-hero{padding:24px 0}}
+
+/* ===== v3: light cream/white theme ===== */
+:root{
+  --paper:#ffffff;
+  --sand:#faf6ee;          /* soft cream */
+  --sand-2:#f2ead9;
+  --cream:#fdfaf3;
+  --gold-text:#9a6d12;     /* darker gold, readable on light backgrounds */
+  --line-dark:rgba(43,36,28,.14);
+}
+h1 em,h2 em,h3 em,.eyebrow,.text-link,.card .num,.faq summary::after,.matrix .y{color:var(--gold-text)}
+
+/* header */
+.site-header,.site-header.scrolled{background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--line),0 6px 20px rgba(43,36,28,.06);backdrop-filter:blur(8px)}
+.brand{color:var(--ink)}
+.brand small{color:var(--gold-text)}
+.menu a{color:var(--text)}
+.menu a:hover,.menu a[aria-current="page"]{color:var(--gold-text)}
+.menu .sub{background:#fff;border-color:var(--line);box-shadow:0 12px 30px rgba(43,36,28,.1)}
+.burger{color:var(--ink)}
+@media (max-width:1180px){.menu{background:#fff}}
+
+/* heroes: cream wash over photos, dark text */
+.hero,.page-hero{color:var(--ink);background:var(--cream)}
+.hero::after,.page-hero::after{background:linear-gradient(100deg,rgba(253,250,243,.97) 0%,rgba(253,250,243,.88) 45%,rgba(253,250,243,.35) 100%)}
+.hero .lead,.page-hero .lead{color:var(--muted)}
+.hero-meta{color:var(--muted)}
+.hero-meta b{color:var(--ink)}
+.slogan{color:var(--gold-text)}
+.crumbs{color:var(--muted)}
+.crumbs a{color:var(--gold-text)}
+.btn-ghost,.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-ghost:hover,.btn-line:hover{background:var(--ink);color:#fff}
+
+/* former dark sections become cream */
+.section.dark{background:var(--sand);color:var(--text)}
+.section.dark .lead,.dark .card p,.dark .card ul,.dark .counter span{color:var(--muted)}
+.dark .card{background:#fff;border-color:var(--line)}
+.dark .counter b{color:var(--ink)}
+.ops-card{background:#fff;border-color:var(--line)}
+.kv dt{color:var(--gold-text)}
+.kv dd{color:var(--text)}
+.routes-list button{color:var(--text);background:#fff;border-color:var(--line)}
+.routes-list b{color:var(--ink)}
+.routes-list small,.contact-info,.steps li{color:var(--muted)}
+.contact-info a{color:var(--gold-text)}
+form.enquiry{border:1px solid var(--line);box-shadow:0 10px 30px rgba(43,36,28,.06)}
+.map{background:var(--sand-2)}
+
+/* international band */
+.intl{color:var(--ink);background:var(--cream)}
+.intl::after{background:linear-gradient(90deg,rgba(253,250,243,.97),rgba(253,250,243,.9) 55%,rgba(253,250,243,.6))}
+.intl .lead{color:var(--muted)}
+.intl .card{background:rgba(255,255,255,.85);border-color:var(--line)}
+.intl .card p{color:var(--muted)}
+
+/* chips, tables, bands */
+.markets span{background:#fff;color:var(--text);border:1px solid var(--line)}
+.matrix thead th{background:var(--sand-2);color:var(--ink)}
+.cta-band{background:linear-gradient(120deg,var(--sand-2),var(--cream));color:var(--ink);border:1px solid var(--line)}
+.cta-band p{color:var(--muted)}
+
+/* footer */
+.site-footer{background:var(--sand);color:var(--muted);border-top:1px solid var(--line)}
+.site-footer h4{color:var(--gold-text)}
+.site-footer a{color:var(--text)}
+.site-footer a:hover{color:var(--gold-text)}
+.site-footer .brand{color:var(--ink)}
+
+/* misc */
+.to-top{background:#fff;color:var(--gold-text);border:1px solid var(--line)}
+.nf{background:var(--cream);color:var(--text)}
+.nf p{color:var(--muted)!important}
