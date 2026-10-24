@@ -47,12 +47,10 @@ routeButtons.forEach(el => {
 routeSelect?.addEventListener('change', () => setRoute(routeSelect.value));
 setRoute(new URLSearchParams(location.search).get('route'));
 
-// Thank-you message after FormSubmit redirects back with ?sent=1
-if (new URLSearchParams(location.search).has('sent')) {
-  document.querySelector('.form-ok')?.classList.add('show');
-}
-const nextField = document.querySelector('input[name="_next"]');
-if (nextField) nextField.value = location.href.split(/[?#]/)[0] + '?sent=1#enquiry';
+// Result message after send-enquiry.php redirects back with ?sent=1 or ?error=1
+const formParams = new URLSearchParams(location.search);
+if (formParams.has('sent')) document.querySelector('.form-ok')?.classList.add('show');
+if (formParams.has('error')) document.querySelector('.form-err')?.classList.add('show');
 
 // Product filter chips
 const chips = document.querySelectorAll('.chips button');

@@ -412,3 +412,7 @@ form.enquiry{border:1px solid var(--line);box-shadow:0 10px 30px rgba(43,36,28,.
 .to-top{background:#fff;color:var(--gold-text);border:1px solid var(--line)}
 .nf{background:var(--cream);color:var(--text)}
 .nf p{color:var(--muted)!important}
+.form-err{grid-column:1/-1;background:#fbebeb;border:1px solid #e3a3a3;color:#7a2020;padding:14px 16px;border-radius:10px;display:none}
+.form-err.show{display:block}
+.form-err a{color:inherit}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
