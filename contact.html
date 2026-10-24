@@ -79,24 +79,28 @@
         <li>You receive a clear proposal and delivery plan.</li>
       </ol>
     </div>
-    <form class="enquiry reveal" action="https://fhdepriprojects.com/send-enquiry.php" method="POST">
+    <form class="enquiry reveal" action="https://api.web3forms.com/submit" method="POST" id="enquiry-form">
       <p class="form-ok" role="status">Thank you. Your enquiry has been sent and we'll be in touch shortly.</p>
-      <p class="form-err" role="alert">Sorry, your enquiry could not be sent. Please check your name, email and message, or email us at <a href="mailto:info@fhdepriprojects.com">info@fhdepriprojects.com</a>.</p>
-      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <p class="form-err" role="alert">Sorry, your enquiry could not be sent. Please try again, or email us at <a href="mailto:info@fhdepriprojects.com">info@fhdepriprojects.com</a>.</p>
+      <!-- Web3Forms access key for info@fhdepriprojects.com (get one free at web3forms.com) -->
+      <input type="hidden" name="access_key" value="68556de4-97ad-4bd9-8d31-d1ed80a0d80e">
+      <input type="hidden" name="subject" value="New website enquiry: Depri Projects">
+      <input type="hidden" name="from_name" value="Depri Projects Website">
+      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="full"><label for="route">Enquiry route</label>
-        <select id="route" name="route" required>
+        <select id="route" name="Enquiry route" required>
           <option>Aggregate &amp; stone supply</option>
           <option>Mining &amp; agricultural services</option>
           <option>Tender / RFQ</option>
           <option>International business</option>
           <option>General enquiry</option>
         </select></div>
-      <div><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
-      <div><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></div>
+      <div><label for="name">Full name</label><input id="name" name="Full name" autocomplete="name" required></div>
+      <div><label for="company">Company</label><input id="company" name="Company" autocomplete="organization"></div>
       <div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
-      <div><label for="phone">Phone (optional)</label><input id="phone" type="tel" name="phone" autocomplete="tel"></div>
-      <div class="full"><label for="product">Product / service of interest</label><input id="product" name="product" placeholder="e.g. 19mm aggregate, 200 tonnes, delivered to Pretoria"></div>
-      <div class="full"><label for="msg">Message</label><textarea id="msg" name="message" required></textarea></div>
+      <div><label for="phone">Phone (optional)</label><input id="phone" type="tel" name="Phone" autocomplete="tel"></div>
+      <div class="full"><label for="product">Product / service of interest</label><input id="product" name="Product / service of interest" placeholder="e.g. 19mm aggregate, 200 tonnes, delivered to Pretoria"></div>
+      <div class="full"><label for="msg">Message</label><textarea id="msg" name="Message" required></textarea></div>
       <div class="full"><button class="btn btn-dark" type="submit">Send Enquiry →</button></div>
       <p class="full form-note">Your details are used only to respond to your enquiry.</p>
     </form>
