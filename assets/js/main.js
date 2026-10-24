@@ -47,18 +47,14 @@ routeButtons.forEach(el => {
 routeSelect?.addEventListener('change', () => setRoute(routeSelect.value));
 setRoute(new URLSearchParams(location.search).get('route'));
 
-// Enquiry form: posts straight to Web3Forms, which sends the visitor back here with ?sent=1
-const enquiryForm = document.getElementById('enquiry-form');
-enquiryForm?.addEventListener('submit', () => {
-  const route = enquiryForm.querySelector('[name="Enquiry route"]').value || 'General';
-  const name = enquiryForm.querySelector('[name="Full name"]').value;
-  enquiryForm.querySelector('[name="subject"]').value = 'New website enquiry: ' + route + ' (' + name + ')';
-  const btn = enquiryForm.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending…';
+// Enquiry form: send-enquiry.php emails info@ and sends the visitor back with ?sent=1
+const formParams = new URLSearchParams(location.search);
+if (formParams.has('sent')) document.querySelector('.form-ok')?.classList.add('show');
+// Tidy the address bar so a reload doesn't repeat the message
+if (formParams.has('sent') || formParams.has('error')) history.replaceState(null, '', location.pathname + '#enquiry');
+document.getElementById('enquiry-form')?.addEventListener('submit', e => {
+  e.target.querySelector('button[type="submit"]').textContent = 'Sending…';
 });
-if (new URLSearchParams(location.search).has('sent')) {
-  document.querySelector('.form-ok')?.classList.add('show');
-}
 
 // Product filter chips
 const chips = document.querySelectorAll('.chips button');

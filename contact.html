@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20261024">
+<link rel="stylesheet" href="assets/css/style.css?v=20261024b">
 </head>
 <body>
 
@@ -80,29 +80,23 @@
         <li>You receive a clear proposal and delivery plan.</li>
       </ol>
     </div>
-    <form class="enquiry reveal" action="https://api.web3forms.com/submit" method="POST" id="enquiry-form">
+    <form class="enquiry reveal" action="https://fhdepriprojects.com/send-enquiry.php" method="POST" id="enquiry-form">
       <p class="form-ok" role="status">Thank you. Your enquiry has been sent and we'll be in touch shortly.</p>
-      <p class="form-err" role="alert">Sorry, your enquiry could not be sent. Please try again, or email us at <a href="mailto:info@fhdepriprojects.com">info@fhdepriprojects.com</a>.</p>
-      <!-- Web3Forms access key for info@fhdepriprojects.com (get one free at web3forms.com) -->
-      <input type="hidden" name="access_key" value="68556de4-97ad-4bd9-8d31-d1ed80a0d80e">
-      <input type="hidden" name="subject" value="New website enquiry: Depri Projects">
-      <input type="hidden" name="from_name" value="Depri Projects Website">
-      <input type="hidden" name="redirect" value="https://fhdepriprojects.com/contact.html?sent=1#enquiry">
-      <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="full"><label for="route">Enquiry route</label>
-        <select id="route" name="Enquiry route" required>
+        <select id="route" name="route" required>
           <option>Aggregate &amp; stone supply</option>
           <option>Mining &amp; agricultural services</option>
           <option>Tender / RFQ</option>
           <option>International business</option>
           <option>General enquiry</option>
         </select></div>
-      <div><label for="name">Full name</label><input id="name" name="Full name" autocomplete="name" required></div>
-      <div><label for="company">Company</label><input id="company" name="Company" autocomplete="organization"></div>
+      <div><label for="name">Full name</label><input id="name" name="name" autocomplete="name" required></div>
+      <div><label for="company">Company</label><input id="company" name="company" autocomplete="organization"></div>
       <div><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
-      <div><label for="phone">Phone (optional)</label><input id="phone" type="tel" name="Phone" autocomplete="tel"></div>
-      <div class="full"><label for="product">Product / service of interest</label><input id="product" name="Product / service of interest" placeholder="e.g. 19mm aggregate, 200 tonnes, delivered to Pretoria"></div>
-      <div class="full"><label for="msg">Message</label><textarea id="msg" name="Message" required></textarea></div>
+      <div><label for="phone">Phone (optional)</label><input id="phone" type="tel" name="phone" autocomplete="tel"></div>
+      <div class="full"><label for="product">Product / service of interest</label><input id="product" name="product" placeholder="e.g. 19mm aggregate, 200 tonnes, delivered to Pretoria"></div>
+      <div class="full"><label for="msg">Message</label><textarea id="msg" name="message" required></textarea></div>
       <div class="full"><button class="btn btn-dark" type="submit">Send Enquiry →</button></div>
       <p class="full form-note">Your details are used only to respond to your enquiry.</p>
     </form>
@@ -157,6 +151,6 @@
 
 <a class="wa-float" href="https://wa.me/27834498125?text=Hello%20Depri%20Projects%2C%20I%27d%20like%20a%20quote%20for%20materials" target="_blank" rel="noopener" aria-label="Chat with Depri Projects on WhatsApp"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9 3 3.3 8.6 3.3 15.6c0 2.2.6 4.4 1.7 6.3L3 29l7.3-1.9c1.8 1 3.8 1.5 5.8 1.5 7 0 12.7-5.7 12.7-12.6C28.7 8.6 23 3 16 3zm0 23.1c-1.9 0-3.7-.5-5.3-1.4l-.4-.2-4.3 1.1 1.2-4.2-.3-.4a10.4 10.4 0 0 1-1.6-5.5C5.3 9.8 10.1 5.1 16 5.1s10.6 4.7 10.6 10.5S21.9 26.1 16 26.1zm5.8-7.8c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1-.3-.2-1.4-.5-2.6-1.6-1-.9-1.6-1.9-1.8-2.2-.2-.3 0-.5.1-.7l.5-.6.3-.5c.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 .8.3 1.4.5 1.9.7.8.3 1.5.2 2.1.1.6-.1 1.9-.8 2.2-1.5.3-.7.3-1.4.2-1.5-.1-.2-.3-.3-.6-.4z"/></svg></a>
 <button class="to-top" type="button" aria-label="Back to top">↑</button>
-<script src="assets/js/main.js?v=20261024"></script>
+<script src="assets/js/main.js?v=20261024b"></script>
 </body>
 </html>
