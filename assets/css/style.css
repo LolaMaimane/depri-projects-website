@@ -416,3 +416,4 @@ form.enquiry{border:1px solid var(--line);box-shadow:0 10px 30px rgba(43,36,28,.
 .form-err.show{display:block}
 .form-err a{color:inherit}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.split img.about-logo{object-fit:contain;width:100%;max-width:420px;height:auto;margin:0 auto;border-radius:0;filter:drop-shadow(0 18px 30px rgba(43,36,28,.18))}
