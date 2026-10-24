@@ -47,31 +47,18 @@ routeButtons.forEach(el => {
 routeSelect?.addEventListener('change', () => setRoute(routeSelect.value));
 setRoute(new URLSearchParams(location.search).get('route'));
 
-// Enquiry form: send to Web3Forms in the background and show the result on the page
+// Enquiry form: posts straight to Web3Forms, which sends the visitor back here with ?sent=1
 const enquiryForm = document.getElementById('enquiry-form');
-enquiryForm?.addEventListener('submit', async e => {
-  e.preventDefault();
-  const ok = enquiryForm.querySelector('.form-ok');
-  const err = enquiryForm.querySelector('.form-err');
+enquiryForm?.addEventListener('submit', () => {
+  const route = enquiryForm.querySelector('[name="Enquiry route"]').value || 'General';
+  const name = enquiryForm.querySelector('[name="Full name"]').value;
+  enquiryForm.querySelector('[name="subject"]').value = 'New website enquiry: ' + route + ' (' + name + ')';
   const btn = enquiryForm.querySelector('button[type="submit"]');
-  const label = btn.textContent;
-  ok.classList.remove('show'); err.classList.remove('show');
-  btn.disabled = true; btn.textContent = 'Sending…';
-  try {
-    const data = new FormData(enquiryForm);
-    data.set('subject', 'New website enquiry: ' + (data.get('Enquiry route') || 'General') + ' (' + data.get('Full name') + ')');
-    const res = await fetch(enquiryForm.action, { method: 'POST', headers: { Accept: 'application/json' }, body: data });
-    const json = await res.json();
-    if (!json.success) throw new Error(json.message);
-    enquiryForm.reset();
-    ok.classList.add('show');
-  } catch {
-    err.classList.add('show');
-  } finally {
-    btn.disabled = false; btn.textContent = label;
-    (ok.classList.contains('show') ? ok : err).scrollIntoView({ behavior: 'smooth', block: 'center' });
-  }
+  btn.textContent = 'Sending…';
 });
+if (new URLSearchParams(location.search).has('sent')) {
+  document.querySelector('.form-ok')?.classList.add('show');
+}
 
 // Product filter chips
 const chips = document.querySelectorAll('.chips button');
