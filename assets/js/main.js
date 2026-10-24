@@ -47,13 +47,18 @@ routeButtons.forEach(el => {
 routeSelect?.addEventListener('change', () => setRoute(routeSelect.value));
 setRoute(new URLSearchParams(location.search).get('route'));
 
-// Enquiry form: send-enquiry.php emails info@ and sends the visitor back with ?sent=1 or ?error=1
-const formParams = new URLSearchParams(location.search);
-if (formParams.has('sent')) document.querySelector('.form-ok')?.classList.add('show');
-if (formParams.has('error')) document.querySelector('.form-err')?.classList.add('show');
-document.getElementById('enquiry-form')?.addEventListener('submit', e => {
-  e.target.querySelector('button[type="submit"]').textContent = 'Sending…';
+// Enquiry form: posts straight to Web3Forms, which sends the visitor back here with ?sent=1
+const enquiryForm = document.getElementById('enquiry-form');
+enquiryForm?.addEventListener('submit', () => {
+  const route = enquiryForm.querySelector('[name="Enquiry route"]').value || 'General';
+  const name = enquiryForm.querySelector('[name="Full name"]').value;
+  enquiryForm.querySelector('[name="subject"]').value = 'New website enquiry: ' + route + ' (' + name + ')';
+  const btn = enquiryForm.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending…';
 });
+if (new URLSearchParams(location.search).has('sent')) {
+  document.querySelector('.form-ok')?.classList.add('show');
+}
 
 // Product filter chips
 const chips = document.querySelectorAll('.chips button');
